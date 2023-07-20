@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.article {
+  padding-top: 100px !important;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #202124;
+  color: #bdc1c5;
+}
+
+@media screen and (orientation: portrait) {
+  .article {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+}
+@media screen and (orientation: landscape) {
+  .article {
+    padding-left: 20vw;
+    padding-right: 20vw;
+  }
+}
+
+.article h1 {
+  color: white;
+  margin-bottom: 3vh;
+}
+
+.article a {
+  color: #bdc1c5;
+}
+
+.article-para {
+  line-height: 150%;
+  margin-bottom: 1vh;
+}
+
+@media screen and (orientation: portrait) {
+  .article-para {
+    font-size: small;
+  }
+}
+@media screen and (orientation: landscape) {
+  .article-para {
+    font-size: large;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .article-code-block {
+    font-size: small;
+  }
+}
+@media screen and (orientation: landscape) {
+  .article-code-block {
+    font-size: large;
+  }
+}
+
+.article-mono {
+  font-family: 'Red Hat Mono', monospace;
+  white-space: pre;
+  background-color: rgb(60, 60, 60);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 1vh;
+  overflow-x: auto;
+}
+
+@media screen and (orientation: portrait) {
+  .article-mono {
+    font-size: small;
+  }
+}
+
+.article-quote {
+  white-space: pre-wrap;
+  border-left: 10px solid #bdc1c5;
+  background-color: rgb(60, 60, 60);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 1vh;
+  overflow-x: auto;
+}
+
+@media screen and (orientation: portrait) {
+  .article-quote {
+    font-size: small;
+  }
+}
+
+.article-math {
+  font-size: larger;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+  word-spacing: normal;
+}
+
+.article-subtitle {
+  margin-top: 3vh;
+  margin-bottom: 1vh;
+}
+
+.article-image {
+  padding-bottom: 2vh;
+}
+
+.article-image img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 500px;
+}
+
+@media screen and (orientation: portrait) {
+  .article-image img {
+    max-width: 85vw;
+  }
+}
+@media screen and (orientation: landscape) {
+  .article-image img {
+    max-width: 60vw;
+  }
+}
+
+.article-image p {
+  padding-top: 0.5vh;
+  text-align: center;
+  font-style: italic;
+  font-size: small;
+}
+
+.article-list {
+  line-height: 150%;
+  margin-bottom: 1vh;
+  margin-left: 20px;
+}

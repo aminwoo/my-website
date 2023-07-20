@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap');
+
+.page {
+  padding-top: 100px !important;
+  /* font-family: 'Red Hat Mono', monospace; */
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  padding: 20px;
+  background-color: #1f2937;
+  min-width: 100wv;
+  min-height: 100vh;
+}
+
+.page h1 {
+  text-align: center;
+}
+
+@media screen and (orientation: portrait) {
+  .page h1 {
+    font-size: 2rem;
+  }
+}
+@media screen and (orientation: landscape) {
+  .page h1 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .page h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.page a {
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.page p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+/* 
+@media (hover: hover) {
+  .page a:hover {
+    color: red;
+    transform: scale(1.2);
+  }
+} */
+
+.languages {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* .languages > * {
+  display: block;
+  margin: 100px;
+} */
+
+.language-name-pair {
+  display: block;
+  text-align: center;
+}
+
+.language-display {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.language-display img {
+  height: 50px;
+  width: 50px;
+}
+
+.narrow-center-text {
+  text-align: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
