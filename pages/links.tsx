@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
+import UISwitch from '@/components/UISwitch';
 
 const LinksToOtherSites = () => {
   return (
@@ -10,6 +11,9 @@ const LinksToOtherSites = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className={'render-controls'}>
+        <UISwitch />
+      </div>
       <h1 className="links-title">Links</h1>
       <div className="links">
         <a target="_blank" rel="noreferrer" href={'https://github.com/aminwoo/'}>

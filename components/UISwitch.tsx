@@ -7,6 +7,8 @@ const UISwitch = () => {
   const dispatch = useDispatch();
 
   function toggle() {
+    if (!isCLI && window.location.href !== '/') 
+      window.location.href = '/';
     dispatch(setIsCLI(!isCLI));
   }
 

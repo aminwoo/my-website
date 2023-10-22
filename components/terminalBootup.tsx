@@ -1,5 +1,5 @@
 import { setUsername } from '@/store/commandlineSlice';
-import React from 'react';
+import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
 
 const loginMessage = (ip: string, username: string) => {
@@ -15,7 +15,7 @@ const loginMessage = (ip: string, username: string) => {
     ':' +
     ('0' + currentdate.getMinutes()).slice(-2);
 
-  return (
+    return (
     <>
       <p className="typed typed1">{`logged in as: ${username ? username : 'guest'}`}</p>
       <p className="typed typed2">{`###################################################################################################`}</p>
@@ -34,15 +34,22 @@ const loginMessage = (ip: string, username: string) => {
 };
 
 const LoginMessage = () => {
+  const [ipAddress, setIPAddress] = useState('')
   let username = localStorage.getItem('username');
   username = username ? username : 'guest';
   const dispatch = useDispatch();
-
   dispatch(setUsername(username));
+
+  useEffect(() => {
+    fetch('https://api.ipify.org?format=json')
+      .then(response => response.json())
+      .then(data => setIPAddress(data.ip))
+      .catch(error => console.log(error))
+  }, [])
 
   return (
     <div className={'typing-container'}>
-      <p>{loginMessage('0.0.0.0', username)}</p>
+      <p>{loginMessage(ipAddress, username)}</p>
     </div>
   );
 };

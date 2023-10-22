@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import UISwitch from '@/components/UISwitch';
 
 type LogoAndLanguageDisplayProps = {
   languagesAndLogos: string[][];
@@ -22,7 +23,7 @@ const LogoAndLanguageDisplay = ({ languagesAndLogos }: LogoAndLanguageDisplayPro
   );
 };
 
-const About = () => {
+const About = () => {  
   const languagesAndLogos = [
     ['Python', '/Python.png'],
     ['C++', '/CPP.png'],
@@ -38,6 +39,10 @@ const About = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className={'render-controls'}>
+          <UISwitch />
+      </div>
+
       <div className="about-page">
         <h1 className="about-title">About</h1>
         <p className="about-paragraph">
