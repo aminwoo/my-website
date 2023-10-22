@@ -12,7 +12,7 @@ const LinksToOtherSites = () => {
       </Head>
       <h1 className="links-title">Links</h1>
       <div className="links">
-        <a target="_blank" rel="noreferrer" href={'https://github.com/cyrobw/'}>
+        <a target="_blank" rel="noreferrer" href={'https://github.com/aminwoo/'}>
           <div className="link">
             <div>
               <h2>GitHub</h2>

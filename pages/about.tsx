@@ -28,7 +28,6 @@ const About = () => {
     ['C++', '/CPP.png'],
     ['JavaScript', '/JS.png'],
     ['TypeScript', '/TS.png'],
-    ['SAS', '/SAS.png'],
   ];
 
   return (
