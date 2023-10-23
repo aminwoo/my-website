@@ -156,6 +156,17 @@ function processCommand({
     return 'Logging you out, goodbye!';
   }
 
+  if (commandParts[0] == 'bash') {
+    if (commandParts.length < 2) return 'Please provide a file to run';
+
+    let dirContents = directoryStructure
+    .get(dirBiscuitCrumbs[dirBiscuitCrumbs.length - 1])
+    .join(' ');
+
+    if (dirContents.includes(commandParts[1]))
+      return commandParts[1];
+  }
+
   return "Error: '" + command + "' is not a known command.";
 }
 

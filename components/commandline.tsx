@@ -20,7 +20,12 @@ function interleaveHistory(commands: string[], responses: string[]): JSX.Element
   let interleavedArr: JSX.Element[] = [];
   for (let i = 0; i < commands.length; i++) {
     interleavedArr.push(<span>{commands[i]}</span>);
-    interleavedArr.push(<span>{responses[i]}</span>);
+    if (responses[i] === 'donut.sh') {
+      interleavedArr.push(<pre className="center" id="d"></pre>);
+    }
+    else {
+      interleavedArr.push(<span>{responses[i]}</span>);
+    }
   }
   return interleavedArr;
 }
@@ -57,6 +62,19 @@ const CommandLine = () => {
     return () => {
       document.removeEventListener('click', handleClickOutsideTextarea);
     };
+  }, []);
+
+  useEffect(() => {
+    const script = document.createElement('script');
+  
+    script.src = "scripts/donut.js";
+    script.async = true;
+  
+    document.body.appendChild(script);
+  
+    return () => {
+      document.body.removeChild(script);
+    }
   }, []);
 
   useEffect(() => {
@@ -149,6 +167,7 @@ const CommandLine = () => {
         <div className="multiline">
           <LoginMessage />
         </div>
+
         {interleaveHistory(commands, responses).map((txt: JSX.Element, i: number) => {
           return (
             <div key={i.toString()} style={{ whiteSpace: 'pre-wrap' }}>
@@ -156,7 +175,7 @@ const CommandLine = () => {
             </div>
           );
         })}
-
+  
         <div className="terminal-line">
           <label id="prompt" htmlFor={'textarea'}>
             {promptLine + dirBiscuitCrumbs.join('/') + '$ '}

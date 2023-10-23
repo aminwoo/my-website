@@ -1,6 +1,6 @@
 const directoryStructure = new Map();
 
-directoryStructure.set('', ['problems', 'misc', 'classified']);
+directoryStructure.set('', ['problems', 'misc', 'classified', 'donut.sh']);
 directoryStructure.set('problems', ['ant.txt']);
 directoryStructure.set('misc', ['about.txt']);
 directoryStructure.set('classified', ['flag.txt']);
