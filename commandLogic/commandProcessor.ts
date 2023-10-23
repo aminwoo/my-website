@@ -106,7 +106,7 @@ function processCommand({
         return `${commandParts[1]} does not exist.`;
       }
     }
-    if (commandParts[1].endsWith('.txt')) {
+    if (commandParts[1].endsWith('.txt') || commandParts[1] == 'README') {
       let txt = txtMap.get(commandParts[1]);
       if (txt && dirContents.includes(commandParts[1])) {
         return txt;
