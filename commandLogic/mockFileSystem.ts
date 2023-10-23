@@ -1,15 +1,14 @@
 const directoryStructure = new Map();
 
-directoryStructure.set('', ['About', 'Articles', 'Projects', 'Links']);
-directoryStructure.set('About', ['about.page', 'about.txt']);
-directoryStructure.set('Articles', [`articles.page`]);
-directoryStructure.set('Projects', ['projects.txt']);
-directoryStructure.set('Links', ['github.lnk', 'linkedin.lnk']);
+directoryStructure.set('', ['problems', 'misc', 'classified']);
+directoryStructure.set('problems', ['ant.txt']);
+directoryStructure.set('misc', ['about.txt']);
+directoryStructure.set('classified', ['flag.txt']);
 
 export default directoryStructure;
 
 const lnkMap = new Map();
-lnkMap.set('github.lnk', 'https://github.com/cyrobw/');
+lnkMap.set('github.lnk', 'https://github.com/aminwoo/');
 lnkMap.set('linkedin.lnk', 'https://www.linkedin.com/in/ben-woo/');
 
 export { lnkMap };

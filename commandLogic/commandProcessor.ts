@@ -91,7 +91,7 @@ function processCommand({
     return directoryStructure.get(dirBiscuitCrumbs[dirBiscuitCrumbs.length - 1]).join('  ');
   }
 
-  if (commandParts[0] == 'open') {
+  if (commandParts[0] == 'cat') {
     if (commandParts.length < 2) return 'Please provide a file';
     let dirContents = directoryStructure
       .get(dirBiscuitCrumbs[dirBiscuitCrumbs.length - 1])
